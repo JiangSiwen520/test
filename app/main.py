@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     import pandas as pd
-    df = pd.read_excel('000001.xlsx')
-    a = df.columns[0]
+    #df = pd.read_excel('000001.xlsx')
+    #a = df.columns[0]
     b = 'date'
     return 'Hello, Welcome to CloudBase_JSW, 2023-02-13!!!->5.1\n'+b+a
 
