@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     return 'Hello, Welcome to CloudBase!35\n'
-@app.route('/ADF')
+@app.route('/ne')
 def fun2():
     
     df = pd.read_excel('000001.xlsx')
