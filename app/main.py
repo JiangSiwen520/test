@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask
+import model
 
 app = Flask(__name__)
 
@@ -9,7 +10,7 @@ def hello_world():
     return 'Hello, Welcome to CloudBase!\n'
 
 # 将 model 模块里的蓝图对象 new_list 注册到 app
-# app.register_blueprint(model.ADF)
+app.register_blueprint(model.ADF)
 
 if __name__ == "__main__":
     #app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
