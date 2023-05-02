@@ -1,5 +1,6 @@
 from flask import Flask
 import model
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -9,8 +10,11 @@ def hello_world():
 @app.route('/ne')
 def fun2():
     q = 4
+    df = pd.read_excel('000001.xlsx')
+    name = pd.columns[0]
     return {
-        'p':q
+        'p':q,
+        'name':name
         }
 
 
