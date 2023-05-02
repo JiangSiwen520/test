@@ -16,8 +16,9 @@ AIC_BIC= Blueprint('AIC_BIC', __name__)
 PARAM= Blueprint('PARAM', __name__)
 
 # 时序图、ADF
-@ADF.route('/ADF/<series>')
-def fun1(series):
+@ADF.route('/ADF')
+def fun1():
+    series = 'price'
     if series == 'price':
         df = pd.read_excel('000001.xlsx')
     else:
