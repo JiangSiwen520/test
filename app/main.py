@@ -11,14 +11,7 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, Welcome to CloudBase!\n'
 
-@app.route('/ADF')
-def fun2():
-    df = pd.read_excel('000001.xlsx')
-    ## 平稳性检验
-    result = adfuller(df['price'].dropna()) #不能拒绝原假设，即原序列存在单位根
-    p = result[1].round(4)
-     
-    return str(p)
+
 
 # 将 model 模块里的蓝图对象 new_list 注册到 app
 # app.register_blueprint(model.ADF)
