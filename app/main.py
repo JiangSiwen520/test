@@ -1,6 +1,4 @@
 from flask import Flask
-import pandas as pd
-from statsmodels.tsa.stattools import adfuller # ADF单位根检验
 
 app = Flask(__name__)
 
@@ -9,13 +7,9 @@ def hello_world():
     return 'Hello, Welcome to CloudBase!35\n'
 @app.route('/ne')
 def fun2():
-    
-    df = pd.read_excel('000001.xlsx')
-    result = adfuller(df['price'].dropna()) #不能拒绝原假设，即原序列存在单位根
-    p = result[1].round(4)
     q = 4
     return {
-        'p':p
+        'p':q
         }
 
 
