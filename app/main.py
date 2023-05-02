@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask
 import pandas as pd
 from statsmodels.tsa.stattools import adfuller # ADF单位根检验
@@ -22,5 +20,4 @@ def fun2():
 
 
 if __name__ == "__main__":
-    #app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
     app.run(host='0.0.0.0', debug=False, port=80)
