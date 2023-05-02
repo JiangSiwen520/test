@@ -9,11 +9,9 @@ def hello_world():
 @app.route('/ne')
 def fun2():
     q = 4
-    df = pd.read_excel('000001.xlsx')
-    name = df.columns[0]
     return {
         'p':q,
-        'name':name
+        'name':2333
         }
 
 
