@@ -1,5 +1,5 @@
 from flask import Flask
-import pandas as pd
+import os
 
 app = Flask(__name__)
 
@@ -16,4 +16,4 @@ def fun2():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=False, port=8080)
+    app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT', 80)))
