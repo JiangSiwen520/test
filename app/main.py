@@ -11,7 +11,7 @@ def hello_world():
 def fun2():
     q = 4
     df = pd.read_excel('000001.xlsx')
-    name = pd.columns[0]
+    name = df.columns[0]
     return {
         'p':q,
         'name':name
